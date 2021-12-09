@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fontes em CSS</title>
+    <style>
+        @import url();
+        body {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 16px;
+        /* 
+        Medidas Absolutas
+            cm, mm, in, px, pt, pc
+        Medidas Relativas
+            em, ex, rem, vw, vh, %
+            ex: 16px  geralmente é = 1em
+        */
+        font-size: 1em ;
+        font-weight: 400 ;
+        }
+
+        /* lighter normal bold bolder
+        */
+
+        h1 {
+            /* shorthand font
+            - font-style -> font-weight -> font-size -> font-family
+            
+            font-family: 'worksans', sans-serif;
+            font-weight: bolder;
+            font-size: 3em ;
+            font-style: italic;
+            Estas 4 formatações da fonte pode ser condensada numa propriedade shorthand font, (abaixo)
+            */
+            font: italic bolder 3em 'Work Sans', sans-serif;
+            }
+
+
+        h1, h2 {
+            font-family: 'Times New Roman', Times, serif;
+        }
+        .p1 {
+        font-family: "Times New Roman", Times, serif;
+        }
+        .p2 {
+        font-family: Arial, Helvetica, sans-serif;
+        }
+        .p3 {
+        font-family: "Lucida Console", "Courier New", monospace;
+        }
+    </style>
+</head>
+<body>
+    
+    <h1>Trabalhando com Fontes</h1>
+    <h2>Fontes CSS WEB SAFE COMBINATION</h2>
+    <h3>
+        Consiste em usar mais de uma combinação de fontes para o mesmo fim, e para isso temos que usar as famílias de fontes (font-family).
+    </h3>
+    <p class="p1">
+        Este texto está formatado com font-family: "Times New Roman", Times, serif;
+    </p>
+    <p class="p2">
+        Este texto está formatado com font-family: Arial, Helvetica, sans-serif;
+    </p>
+    <p class="p3">
+        Este texto está formatado com font-family: "Lucida Console", "Courier New", monospace;
+    </p>
+    <h2>Subtítulo do Exercício</h2>
+    <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Est veritatis maiores sequi iste assumenda velit ipsum nam perspiciatis sapiente eum, ratione sit exercitationem? Velit, ab autem. Commodi impedit qui neque!</p>
+</body>
+</html>

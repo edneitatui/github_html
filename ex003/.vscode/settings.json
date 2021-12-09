@@ -1,0 +1,7 @@
+{
+    "emmet.showSuggestionsAsSnippets": true,
+    "emmet.triggerExpansionOnTab": true,
+    "files.autoSave": "afterDelay",
+    "editor.wordWrap": "on",
+    "search.quickOpen.includeSymbols": true
+}

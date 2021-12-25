@@ -1,2 +1,63 @@
 @charset "UTF-8"; 
 
+* {
+    margin:  0px;
+    padding:  0px;
+}
+
+html, body {
+    min-height: 100vh;
+    /*esclarecendo: o min-height = 100vh significa que o tamanho mínimo do corpo da página de 100% do texto (vh = view high = visão vertical) */
+    background-color: darkgray;
+    /* Cor de fundo cinza bem claro */
+}
+
+header { /* header significa a cabeça do corpo da página */
+    background-color: black;
+    color: white;
+    text-align: center;
+}
+header > h1 {
+    padding-top: 50px; /* Espaço superior do cabeçalho com 50px espaço*/
+    font-variant: small-caps; /* Esta alteração na fonte, tornará todas maiúsculas*/
+}
+header > p {
+    padding-bottom: 50px; /* Também altera o espaço abaixo do texto do cabeçalho */
+}
+header a, footer a {
+    /* o "header a" significa o link do autor do verso em questão */
+    /* o "footer a" significa o link do desenvolvedor da pagina */
+    color: white;  
+    text-decoration: none;
+    font-weight: bolder;
+}
+header a:hover, footer a:hover {
+    /* o "header a" significa o hover do link do autor do verso em questão */
+    /* o "footer a" significa o hover do link do desenvolvedor da pagina */    
+    text-decoration: underline;
+}
+section { /* Configura todas as seções com as mesmas características          */
+    padding-top: 10vh;      /* Irá inserir um espaço em cima das classes      */
+    padding-bottom: 10vh;   /* Irá inserir um espaço em baixo das classes     */ 
+    line-height: 2em;       /* Irá inserir um espaçamento entre os paragrafos */
+    padding-left: 30px;     /* Vai inserir um espaço nos parágrafos           */
+}
+section.normal {    /* Esta section refere-se ao corpo normal do texto */
+    background-color: white;
+    color: black;
+}
+section.imagem { /* E esta section refere-se ao corpo com imagem dentro texto*/
+    background-color: rgb(51, 51, 51);  /* Fundo cinza */
+    color: white;                       /* Letras Brancas */
+}
+section.imagem > p {    /* Irá inserir um retangulo no texto da section-image */
+    width: 400px;       /* Irá inserir um tamanho específico                  */
+    background-color: rgba(0, 0, 0, 0.253); /* insere uma cor cinza quase escura  */
+}
+footer {
+    /* o "footer" significa a configuração do rodapé do desenvolvedor da pagina */
+    background-color: black;
+    color: white;
+    text-align: center;
+    padding: 10px;
+}

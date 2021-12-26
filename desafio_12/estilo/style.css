@@ -29,8 +29,8 @@ header { /* header significa a cabeça do corpo da página */
     color: white;
     text-align: center;
 }
-header > h1 {
-    padding-top: 50px; /* Espaço superior do cabeçalho com 50px espaço*/
+header > h1 {   /* Este trata do Cabeçalho "Cordel Moderno"             */
+    padding-top: 50px; /* Espaço superior do cabeçalho com 50px espaço  */
     font-variant: small-caps; /* Esta alteração na fonte, tornará todas maiúsculas*/
     font-family: var(--fonte2);
     font-size: 10vw;   /* usar 10% da View Port Width é uma opção para 
@@ -58,8 +58,14 @@ section { /* Configura todas as seções com as mesmas características         
     padding-left: 30px;     /* Vai inserir um espaço nos parágrafos           */
     font-family: var(--fonte3);
     font-size: 3.5vw;       /* Usar 3.5 % da view port width é uma proposta para
-                            aumentar e diminuir as letras conforme o uso      */
+                               aumentar e diminuir as letras conforme o uso.*/
+    background-size: cover; 
+    background-attachment: fixed; /* Neste ponto fixamos a imagem no fundo. */
 }
+section > p {       /* Nesta section temos paragrafo dentro, e vamos ...    */
+    padding-bottom: 2em;    /* inserir um espaço entre duas septilhas.        */
+}                   /* As septilhas são grupos de 7 frases de um paragrafo. */
+
 section.normal {    /* Esta section refere-se ao corpo normal do texto */
     background-color: white;
     color: black;
@@ -67,11 +73,22 @@ section.normal {    /* Esta section refere-se ao corpo normal do texto */
 section.imagem { /* E esta section refere-se ao corpo com imagem dentro texto*/
     background-color: rgb(51, 51, 51);  /* Fundo cinza */
     color: white;                       /* Letras Brancas */
+    box-shadow: inset 6px 6px 13px 0px rgba(0, 0, 0, 0.479); /* Neste ponto
+    inserimos uma sobra dentro do retangulo da imagem */
 }
 section.imagem > p {    /* Irá inserir um retangulo no texto da section-image */
     display: inline-block; /* Irá inserir um tamanho proporcional à exibição  */
     padding: 5px;       /* Este pading vai dar um espaço entre as frases      */
-    background-color: rgba(0, 0, 0, 0.253); /* insere uma cor cinza quase escura  */
+    background-color: rgba(0, 0, 0, 0.521); /* insere uma cor cinza quase escura, depois de inserir a imagem, precisamos escurecer mais um pouco  */
+    text-shadow: 1px 1px 0px black; /* Lê-se 1px deslocamento lateral e 0px de
+    espalhamento das sombras adicionadas. */ 
+}
+section#img01 {
+    background-image: url('../imagens/background001.jpg'); /* inserindo imagem*/
+    background-position: right center ;                 /* Posicionando imagem */ 
+}
+section#img02 {
+    background-image: url('../imagens/background002.jpg');
 }
 footer {
     /* o "footer" significa a configuração do rodapé do desenvolvedor da pagina */
@@ -79,4 +96,6 @@ footer {
     color: white;
     text-align: center;
     padding: 10px;
+    font-size: 2vw;   /* usar 10% da View Port Width é uma opção para 
+                         aumentar e diminuir as letras conforme aparelho */
 }

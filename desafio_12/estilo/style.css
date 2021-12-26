@@ -1,8 +1,19 @@
 @charset "UTF-8"; 
 
-* {
+@import url('https://fonts.googleapis.com/css2?family=Passion+One:wght@400;700;900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2? family = Passion + One: wght @ 400; 700; 900 & display = swap');
+
+:root {
+    --fonte1: Verdana, Geneva, Tahoma, sans-serif;
+    --fonte2: 'Passion One', cursive;
+    --fonte3: 'Sriracha', cursive;
+}
+
+* {             /* Configurações Gerais  */
     margin:  0px;
     padding:  0px;
+    font-size: 1em;
 }
 
 html, body {
@@ -10,6 +21,7 @@ html, body {
     /*esclarecendo: o min-height = 100vh significa que o tamanho mínimo do corpo da página de 100% do texto (vh = view high = visão vertical) */
     background-color: darkgray;
     /* Cor de fundo cinza bem claro */
+    font-family: var(--fonte1);
 }
 
 header { /* header significa a cabeça do corpo da página */
@@ -20,6 +32,9 @@ header { /* header significa a cabeça do corpo da página */
 header > h1 {
     padding-top: 50px; /* Espaço superior do cabeçalho com 50px espaço*/
     font-variant: small-caps; /* Esta alteração na fonte, tornará todas maiúsculas*/
+    font-family: var(--fonte2);
+    font-size: 10vw;   /* usar 10% da View Port Width é uma opção para 
+                     aumentar e diminuir as letras conforme aparelho */
 }
 header > p {
     padding-bottom: 50px; /* Também altera o espaço abaixo do texto do cabeçalho */
@@ -41,6 +56,9 @@ section { /* Configura todas as seções com as mesmas características         
     padding-bottom: 10vh;   /* Irá inserir um espaço em baixo das classes     */ 
     line-height: 2em;       /* Irá inserir um espaçamento entre os paragrafos */
     padding-left: 30px;     /* Vai inserir um espaço nos parágrafos           */
+    font-family: var(--fonte3);
+    font-size: 3.5vw;       /* Usar 3.5 % da view port width é uma proposta para
+                            aumentar e diminuir as letras conforme o uso      */
 }
 section.normal {    /* Esta section refere-se ao corpo normal do texto */
     background-color: white;
@@ -51,7 +69,8 @@ section.imagem { /* E esta section refere-se ao corpo com imagem dentro texto*/
     color: white;                       /* Letras Brancas */
 }
 section.imagem > p {    /* Irá inserir um retangulo no texto da section-image */
-    width: 400px;       /* Irá inserir um tamanho específico                  */
+    display: inline-block; /* Irá inserir um tamanho proporcional à exibição  */
+    padding: 5px;       /* Este pading vai dar um espaço entre as frases      */
     background-color: rgba(0, 0, 0, 0.253); /* insere uma cor cinza quase escura  */
 }
 footer {

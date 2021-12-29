@@ -12,14 +12,32 @@
         table {
             width: 500px;
             border-collapse: collapse;
+            position: relative;
         }
         td, th {
             border: 1px solid black;
             padding: 10px;
         }
+        caption {
+            font-size: 1.5em;
+            font-weight: bold;
+            padding: 10px;
+            background-color: lightgray;
+        }
         thead, tfoot {
-            background-color: gray;
+            background-color: #383838;
             color: white;
+        }
+        thead > tr > th {
+            position: sticky;
+            top: 0;
+            background-color: #383838;
+        }
+        tbody > tr:nth-child(2n-1){         /* Estilo Zebrado, ímpares com fundo branco */
+            background-color: white;       /* Lembrando que podemos usar o ( 2n-1) */
+        } 
+        tbody > tr:nth-child(2n){         /* Estilo Zebrado, pares com fundo cinza */
+            background-color: lightgray; /* Lembrando que para cinza podemos usar (2n)*/
         }
         td.num {
             text-align: right;
@@ -38,15 +56,16 @@
             TR, TD, TH    
     -->
 <table>
+    <caption>População das Unidades Federativas</caption>
     <thead>
         <tr>
-            <th>Estado</th>
-            <th>População</th>
+            <th scope="col">Estado</th>                    <!-- th São Títulos -->
+            <th scope="col" style="width: 50px;">População</th>
         </tr>
     </thead>
     <tbody>
         <tr>
-            <td>São Paulo</td>
+            <td>São Paulo</td>                             <!-- td  São Dados  -->
             <td class="num">46 649 132</td>
         </tr>
         <tr>
@@ -154,12 +173,12 @@
             <td class="num">652 713</td>
         </tr>
     </tbody>
-    <tfoot>
-        <tr>
-            <th>Total de Habitantes</th>
+        <tfoot>
+            <tr>
+            <th scope="row">Total de Habitantes</th>              <!-- th São Títulos -->
             <td class="num"><strong>210.223.314</strong></td>
-        </tr>
-    </tfoot>
+           </tr>
+        </tfoot>
 </table>
 </body>
 </html>

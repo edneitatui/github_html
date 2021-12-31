@@ -11,12 +11,33 @@
             }
             table {
                 border-collapse: collapse;
-                width: 300px;
+                width: 500px;
+                border: 2px solid black;
             }
             td {
                 border: 1px solid black;
                 padding: 10px;
                 text-align: center;
+            }
+            td.num3 {
+                background-color: darkgray;
+                font-size: 1.5em;
+                border: 2px solid black;
+            }
+            td.num8 {
+                background-color: orange;
+                font-size: 1.5em;
+                border: 2px solid black;
+            }
+            td.num10 {
+                background-color: aquamarine;  
+                font-size: 1.5em;   
+                border: 2px solid black;           
+            }
+            td.num11 {
+                background-color: sandybrown;
+                font-size: 1.5em;
+                border: 2px solid black;
             }
     </style>
 </head>
@@ -27,19 +48,21 @@
         <tr>
             <td>1</td>
             <td>2</td>
-            <td>3</td>
+            <td class="num3" rowspan="2">3</td>
             <td>4</td>
         </tr>
         <tr>
             <td>5</td>
             <td>6</td>
             <td>7</td>
-            <td>8</td>
         </tr>
         <tr>
+            <td class="num8" colspan="3">8</td>
             <td>9</td>
-            <td>10</td>
-            <td>11</td>
+        </tr>
+        <tr>
+            <td class="num10" rowspan="2">10</td>
+            <td class="num11" colspan="2">11</td>
             <td>12</td>
         </tr>
         <tr>
